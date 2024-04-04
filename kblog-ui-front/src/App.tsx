@@ -6,8 +6,10 @@ import { Fragment } from "react/jsx-runtime";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import MainView from "./components/MainView";
+import GlobalInit from "./utils/GlobalInit";
 
 function App() {
+    GlobalInit();
     return (
         <Fragment>
             <BrowserRouter>
