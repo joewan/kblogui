@@ -18,6 +18,7 @@ import {
 import { createConfig, http } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import { walletConnect } from 'wagmi/connectors';
+import TopNav from './components/TopNav';
 
 const config = createConfig({
   chains: [mainnet],
@@ -37,10 +38,12 @@ function App() {
 
   return (
     <>
+    <TopNav />
     <div>
+      
+<br />
     <Address ellipsis tooltip address="0x21CDf0974d53a6e96eF05d7B324a9803735fFd3B" />
 
-<br />
     <WagmiWeb3ConfigProvider
       eip6963={{
         autoAddInjectedWallets: true,
