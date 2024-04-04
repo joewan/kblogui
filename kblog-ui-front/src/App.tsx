@@ -12,7 +12,7 @@ function App() {
                 <nav>
                     <NavLink to="/home">Home</NavLink> |
                     <NavLink to="/about">About</NavLink> |
-                    <NavLink to={{pathname:"/about", hash:"#256", search:"age=18&name=bruce"}} state={{'good':'navlink'}}>About-Object</NavLink> |
+                    <NavLink to={{pathname:"/about", hash:"#256", search:"a=18&n=b"}} state={{'g':'n'}}>About-Object</NavLink> |
                     <NavLink to="/wallet">Wallet</NavLink> |
                     <NavLink to="/test1">Test1</NavLink> |
                     <NavLink to="/test/abc2">Test2</NavLink> |

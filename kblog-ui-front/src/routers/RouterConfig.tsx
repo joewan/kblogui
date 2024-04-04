@@ -8,6 +8,7 @@ import OrderView from '../views/admin/OrderView';
 import { Fragment } from 'react/jsx-runtime';
 import TestView1 from '../views/test/TestView1';
 import TestView from '../views/test/TestView';
+import View404 from '../views/View404';
 
 
 const RouterConfig: React.FC = () => {
@@ -29,6 +30,7 @@ const RouterConfig: React.FC = () => {
                 { path: 'order', element: <OrderView /> },
             ]
         },
+        { path: '*', element: <View404 />}
     ]);
 
     return <Fragment>{routes}</Fragment>;
