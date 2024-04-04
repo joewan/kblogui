@@ -8,7 +8,7 @@ function HomeView()
     const [count, setCount] = useState(0)
     return <div><h1>HomeView</h1>
     
-    
+
     <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

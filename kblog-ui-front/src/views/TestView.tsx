@@ -1,5 +1,9 @@
+import { useParams } from "react-router-dom";
+
 function TestView() {
-    return <div><h1>TestView</h1></div>
+    // 获取参数
+    const params = useParams()
+    return <div><h1>TestView-[{params.id}]</h1></div>
 }
 
 export default TestView;
