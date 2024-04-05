@@ -11,6 +11,7 @@ import TestView from '../views/test/TestView';
 import View404 from '../views/View404';
 import LoginView from '../views/LoginView';
 import PrivateComponent from '../views/PrivateComponent';
+import BulmaView from '../views/BulmaView';
 
 
 const RouterView: React.FC = () => {
@@ -24,6 +25,7 @@ const RouterView: React.FC = () => {
         { path: '/wallet', element: <WalletView /> },
         { path: '/test/:id', element: <TestView /> },
         { path: '/test1', element: <TestView1 /> },
+        { path: '/bulma', element: <BulmaView /> },
         { 
             path: '/admin', 
             element: <PrivateComponent><AdminView /></PrivateComponent>,

@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import TopNav from '../components/TopNav';
+// import TopNav from '../components/TopNav';
 import { stringify } from 'viem';
 
 function AboutView()
@@ -8,7 +8,7 @@ function AboutView()
 
 
     return <div><h1>AboutView</h1>
-        <TopNav />
+        {/* <TopNav /> */}
 
         {stringify(location)}
 

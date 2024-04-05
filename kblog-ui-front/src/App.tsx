@@ -1,4 +1,5 @@
 import "./App.css";
+import 'bulma/css/bulma.min.css';
 
 import { BrowserRouter} from "react-router-dom";
 
@@ -14,7 +15,10 @@ function App() {
         <Fragment>
             <BrowserRouter>
                 <Header></Header>
-                <MainView></MainView>
+                <MainView>
+
+
+                </MainView>
                 <Footer></Footer>
             </BrowserRouter>
         </Fragment>

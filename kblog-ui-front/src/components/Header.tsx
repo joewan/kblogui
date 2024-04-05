@@ -11,7 +11,8 @@ const Header: React.FC = () => {
             <NavLink to="/wallet">Wallet</NavLink> |
             <NavLink to="/test1">Test1</NavLink> |
             <NavLink to="/test/abc2">Test2</NavLink> |
-            <NavLink to="/admin">Admin</NavLink>
+            <NavLink to="/admin">Admin</NavLink> |
+            <NavLink to="/bulma">Bulma</NavLink>
         </nav>
     </Fragment>
 
