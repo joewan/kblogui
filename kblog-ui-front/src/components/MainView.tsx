@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import RouterConfig from '../routers/RouterConfig';
+import RouterView from '../routers/RouterView';
 
 const MainView: React.FC = () => {
     return (
         <Fragment>
-            <RouterConfig />
+            <RouterView />
         </Fragment>
     );
 };
