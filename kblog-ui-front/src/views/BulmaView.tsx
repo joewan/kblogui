@@ -1,33 +1,52 @@
-import React, { Fragment } from "react";
-import BomeSvg from "../assets/bome.svg";
+import { Fragment, Component } from "react";
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
-
-  // Add a click event on each of them
-  $navbarBurgers.forEach((el) => {
-    el.addEventListener("click", () => {
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
-
-      if (!$target) {
-        console.error("something is error");
-        return;
-      }
-
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle("is-active");
-      $target.classList.toggle("is-active");
+class BulmaView extends Component {
+  componentDidMount() {
+    console.log("App componentDidMount");
+    // Get all "navbar-burger" elements
+    const navbarBurgers = document.querySelectorAll('.navbar-burger');
+    console.log("navbarBurgers: ", navbarBurgers.length);
+    // Add a click event on each of them
+    navbarBurgers.forEach(el => {
+        el.addEventListener('click', this.handleClick);
     });
-  });
-});
+}
 
-const BulmaView: React.FC = () => {
+componentWillUnmount() {
+    // Remove click event listeners when component unmounts
+    const navbarBurgers = document.querySelectorAll('.navbar-burger');
+    navbarBurgers.forEach(el => {
+        el.removeEventListener('click', this.handleClick);
+    });
+}
+
+handleClick = (e: any) => {
+    let targetElement = e.target;
+    // Check if clicked element is .navbar-burger or its descendant
+    while (targetElement && !targetElement.classList.contains('navbar-burger')) {
+        targetElement = targetElement.parentElement;
+    }
+    // If .navbar-burger is found
+    if (targetElement) {
+        console.log("solana mall: ", targetElement.className);
+        const target = targetElement.dataset.target;
+        const $target = document.getElementById(target);
+
+        if ($target == null) {
+            return;
+        }
+
+        if (targetElement.classList.contains("is-active")) {
+            targetElement.classList.remove("is-active");
+            $target.classList.remove("is-active");
+        } else {
+            targetElement.classList.add("is-active");
+            $target.classList.add("is-active");
+        }
+    }
+};
+
+render() {
   return (
     <Fragment>
       <div className="buttons">
@@ -116,5 +135,5 @@ const BulmaView: React.FC = () => {
     </Fragment>
   );
 };
-
+}
 export default BulmaView;
