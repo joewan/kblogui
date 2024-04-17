@@ -46,7 +46,6 @@ const useStyles = createStyles(({ token }) => {
     // },
     container1: {
       display: 'flex',
-      justifyContent: 'center',
       flexDirection: 'column',
       height: '100vh',
       width: '100vw',
