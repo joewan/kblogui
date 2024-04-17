@@ -12,6 +12,7 @@ import View404 from '../views/View404';
 import LoginView from '../views/LoginView';
 import PrivateComponent from '../views/PrivateComponent';
 import BulmaView from '../views/BulmaView';
+import Login from '../pages/user/login';
 
 
 const RouterView: React.FC = () => {
@@ -20,6 +21,7 @@ const RouterView: React.FC = () => {
         { path: '/home', element: <HomeView /> },
         { path: '/about', element: <AboutView /> },
         { path: '/login', element: <LoginView /> },
+        { path: '/login1', element: <Login /> },
         { path: '/test-about', element: <Navigate to="/about" state="{goodno:123}"/>},
 
         { path: '/wallet', element: <WalletView /> },
