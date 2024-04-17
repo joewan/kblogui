@@ -33,24 +33,26 @@ const useStyles = createStyles(({ token }) => {
         color: token.colorPrimaryActive,
       },
     },
-    lang: {
-      width: 42,
-      height: 42,
-      lineHeight: '42px',
-      position: 'fixed',
-      right: 16,
-      borderRadius: token.borderRadius,
-      ':hover': {
-        backgroundColor: token.colorBgTextHover,
-      },
-    },
-    container: {
+    // lang: {
+    //   width: 42,
+    //   height: 42,
+    //   lineHeight: '42px',
+    //   position: 'fixed',
+    //   right: 16,
+    //   borderRadius: token.borderRadius,
+    //   ':hover': {
+    //     backgroundColor: token.colorBgTextHover,
+    //   },
+    // },
+    container1: {
       display: 'flex',
+      justifyContent: 'center',
       flexDirection: 'column',
       height: '100vh',
+      width: '100vw',
       overflow: 'auto',
-    //   backgroundImage:
-    //     "url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')",
+      backgroundImage:
+        "url('https://mdn.alipayobjects.com/yuyan_qk0oxh/afts/img/V-_oS6r-i7wAAAAAAAAAAAAAFl94AQBr')",
       backgroundSize: '100% 100%',
     },
   };
@@ -98,7 +100,7 @@ const Login: React.FC = () => {
   const [type, setType] = useState<string>('account');
   const loginType ='account'
   return (
-    <div className={styles.container}>
+    <div className={styles.container1}>
       <div
         style={{
           flex: '1',
