@@ -113,7 +113,7 @@ const Login: React.FC = () => {
           }}
           logo={<img alt="logo" src="/logo.svg" />}
           title="田园科技"
-          subTitle="提升研发实力，聚焦四方支付"
+          subTitle="聚焦支付"
           initialValues={{
             autoLogin: true,
           }}

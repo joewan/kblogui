@@ -1,9 +1,9 @@
 import React from 'react';
 
-function MedicineList() {
+const MedicineList: React.FC = () => {
     return (
         <div>
-            ComponentContent
+            <h2>MedicineList</h2>
         </div>
     );
 }
