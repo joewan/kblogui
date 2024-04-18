@@ -19,6 +19,8 @@ import {
 import { Alert, message, Tabs } from 'antd';
 import { createStyles } from 'antd-style';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const useStyles = createStyles(({ token }) => {
   return {
@@ -97,6 +99,8 @@ const LoginMessage: React.FC<{
 const Login: React.FC = () => {
   const { styles } = useStyles();
   const [type, setType] = useState<string>('account');
+  const navigate = useNavigate();
+
   const loginType ='account'
   return (
     <div className={styles.container1}>
@@ -118,10 +122,12 @@ const Login: React.FC = () => {
             autoLogin: true,
           }}
           actions={[
-            "其他登录方式",
+            "其他登录方式 :",
             <ActionIcons key="icons" />,
           ]}
           onFinish={async (values) => {
+            navigate('/admin');
+            message.success('登录成功！');
           }}
         >
           <Tabs
@@ -233,14 +239,14 @@ const Login: React.FC = () => {
             }}
           >
             <ProFormCheckbox noStyle name="autoLogin">
-              "自动登录"
+              自动登录
             </ProFormCheckbox>
             <a
               style={{
                 float: 'right',
               }}
             >
-              "忘记密码"
+              忘记密码 ?
             </a>
           </div>
         </LoginForm>

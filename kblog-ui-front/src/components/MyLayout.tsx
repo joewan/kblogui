@@ -110,8 +110,9 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({ children }: any) =>
                             onClick: ({ key }) => {
                               if (key == '/login') {
                                 message.success('退出登录成功');
+                                navigate('/');
                               } else if (key == '/admin/books/list') {
-                                message.success('暂未开通');
+                                message.info('暂未开通');
                               } else {
                                 navigate(key);
                               }
