@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const ArticleCategories: React.FC = () => {
-    return (
-        <div>
-            <h2>ArticleCategories</h2>
-        </div>
-    );
+  return (
+    <div>
+      <h2>ArticleCategories</h2>
+    </div>
+  )
 }
 
-export default ArticleCategories;
+export default ArticleCategories

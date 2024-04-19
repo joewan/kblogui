@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
-import RouterView from '../routers/RouterView';
+import React, { Fragment } from 'react'
+import RouterView from '../routers/RouterView'
 
 const MainView: React.FC = () => {
-    return (
-        <Fragment>
-            <RouterView />
-        </Fragment>
-    );
-};
+  return (
+    <Fragment>
+      <RouterView />
+    </Fragment>
+  )
+}
 
-export default MainView;
+export default MainView

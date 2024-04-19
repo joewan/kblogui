@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const MedicineList: React.FC = () => {
-    return (
-        <div>
-            <h2>MedicineList</h2>
-        </div>
-    );
+  return (
+    <div>
+      <h2>MedicineList</h2>
+    </div>
+  )
 }
 
-export default MedicineList;
+export default MedicineList

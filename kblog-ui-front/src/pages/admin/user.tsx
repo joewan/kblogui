@@ -1,11 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Users: React.FC = () => {
-    return (
-        <div>
-            Users
-        </div>
-    );
+  return <div>Users</div>
 }
 
-export default Users;
+export default Users

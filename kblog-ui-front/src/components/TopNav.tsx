@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/TopNav.scss";
+import React from 'react'
+import '../styles/TopNav.scss'
 
 class TopNav extends React.Component {
   render() {
@@ -25,8 +25,8 @@ class TopNav extends React.Component {
           </nav>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default TopNav;
+export default TopNav
