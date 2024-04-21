@@ -58,26 +58,26 @@ const useStyles = createStyles(({ token }) => {
   }
 })
 
-const ActionIcons = () => {
-  const { styles } = useStyles()
+// const ActionIcons = () => {
+//   const { styles } = useStyles()
 
-  return (
-    <>
-      <AlipayCircleOutlined
-        key='AlipayCircleOutlined'
-        className={styles.action}
-      />
-      <TaobaoCircleOutlined
-        key='TaobaoCircleOutlined'
-        className={styles.action}
-      />
-      <WeiboCircleOutlined
-        key='WeiboCircleOutlined'
-        className={styles.action}
-      />
-    </>
-  )
-}
+//   return (
+//     <>
+//       <AlipayCircleOutlined
+//         key='AlipayCircleOutlined'
+//         className={styles.action}
+//       />
+//       <TaobaoCircleOutlined
+//         key='TaobaoCircleOutlined'
+//         className={styles.action}
+//       />
+//       <WeiboCircleOutlined
+//         key='WeiboCircleOutlined'
+//         className={styles.action}
+//       />
+//     </>
+//   )
+// }
 
 // const Lang = () => {
 //   const { styles } = useStyles();
@@ -129,13 +129,13 @@ const Login: React.FC = () => {
           initialValues={{
             autoLogin: true,
           }}
-          actions={['其他登录方式 :', <ActionIcons key='icons' />]}
+          // actions={['其他登录方式 :', <ActionIcons key='icons' />]}
           onFinish={async (values) => {
             navigate('/admin')
             message.success('登录成功！')
           }}
         >
-          <Tabs
+          {/* <Tabs
             activeKey={type}
             onChange={setType}
             centered
@@ -149,7 +149,7 @@ const Login: React.FC = () => {
                 label: '手机号登录',
               },
             ]}
-          />
+          /> */}
 
           {status === 'error' && loginType === 'account' && (
             <LoginMessage content='账户或密码错误(admin/ant.design)' />
@@ -176,7 +176,7 @@ const Login: React.FC = () => {
                   size: 'large',
                   prefix: <LockOutlined />,
                 }}
-                placeholder='密码: ant.design'
+                placeholder='密码：123456'
                 rules={[
                   {
                     required: true,

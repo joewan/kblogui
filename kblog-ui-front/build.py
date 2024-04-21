@@ -20,7 +20,14 @@ def execute_command(command):
         log(f"Command output:\n{stdout}\nError output:\n{stderr}")
     return stdout, stderr, process.returncode
 
+def format_tsx():
+    command = ['prettier', '--write', 'src/**/*.tsx', '--config', '.prettierrc']
+    execute_command(command)
+
 def main():
+    format_tsx()
+    return
+
     # 修改权限
     log("Changing permissions of aliyun.pem")
     os.system("chmod 600 aliyun.pem")

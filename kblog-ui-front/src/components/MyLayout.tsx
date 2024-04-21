@@ -171,11 +171,11 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({
             borderRadius: borderRadiusLG,
           }}
         >
-          <Breadcrumb>
+          {/* <Breadcrumb>
             <Breadcrumb.Item>首页</Breadcrumb.Item>
             <Breadcrumb.Item>医药管理</Breadcrumb.Item>
             <Breadcrumb.Item>医药分类</Breadcrumb.Item>
-          </Breadcrumb>
+          </Breadcrumb> */}
           {children}
         </Content>
       </Layout>

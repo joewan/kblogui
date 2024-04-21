@@ -24,12 +24,22 @@ const MedicineCategories: React.FC = () => {
         }
       >
         <Space direction='vertical' style={{ width: '100%' }}>
-          <Form layout='inline'>
-            <Form.Item label='名字'>
+          <Form
+            layout='inline'
+            onFinish={(v) => {
+              console.log(v)
+              message.success('搜索成功')
+            }}
+          >
+            <Form.Item label='名字' name='name'>
               <Input placeholder='请输入分类名字' />
             </Form.Item>
             <Form.Item>
-              <Button type='primary' icon={<SearchOutlined />}></Button>
+              <Button
+                type='primary'
+                htmlType='submit'
+                icon={<SearchOutlined />}
+              ></Button>
             </Form.Item>
           </Form>
           <Table
