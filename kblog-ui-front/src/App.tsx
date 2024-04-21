@@ -11,6 +11,7 @@ import MedicineCategories from './pages/admin/medicines/categories'
 import BookCategories from './pages/admin/books/categories'
 import BookList from './pages/admin/books/list'
 import './App.css'
+import TestComponent from './pages/admin/test'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <MyLayout>
           <Routes>
             <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>
+            <Route path='test' element={<TestComponent></TestComponent>}></Route>
             <Route path='users' element={<Users></Users>}></Route>
             <Route
               path='articles/list'

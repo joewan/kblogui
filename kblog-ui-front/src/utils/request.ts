@@ -3,6 +3,7 @@ import axios from 'axios'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { getToken, serverUrl } from './tools'
+import Mock from 'mockjs'
 
 const axiosInst = axios.create({
   baseURL: serverUrl,
@@ -38,6 +39,20 @@ axiosInst.interceptors.response.use(
     return Promise.reject(error)
   },
 )
+
+// Mock the requests
+Mock.setup({
+  timeout: '300',
+})
+
+Mock.mock('/test', 'get', {
+  code: 0,
+  data: {
+    name: '@cname',
+    'age|1-100': 1,
+    'sex|1': ['男', '女'],
+  },
+})
 
 export const get = (url: string, params: any = {}) => {
   return axiosInst.get(url, { params }).then((res) => res.data)

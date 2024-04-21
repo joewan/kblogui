@@ -64,6 +64,11 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({
               label: '看板',
             },
             {
+                key: '/admin/test',
+                icon: <DashboardOutlined />,
+                label: '测试',
+              },
+            {
               key: '/admin/medicines',
               icon: <BookOutlined />,
               label: '医药管理',
