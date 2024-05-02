@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import Link from 'next/link'
 
 const getPokemonImg = (url: string) => {
   // https://pokeapi.co/api/v2/pokemon/1/ 根据url获取id
@@ -33,12 +33,12 @@ function PokemonHome() {
       />
       <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6'>
         {pokemonList.map((item: any) => (
-        //   <Link key={item.url} to={`/${item.name}`}>
+          <Link key={item.url} href={`/pokemon/detail?name=${item.name}`} replace={false}>
             <div className='flex flex-col items-center shadow-md m-2'>
               {item.name}
               <img className='h-48' src={getPokemonImg(item.url)} alt='' />
             </div>
-        //   </Link>
+        </Link>
         )
         )}
       </div>
