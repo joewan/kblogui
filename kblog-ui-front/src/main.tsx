@@ -7,6 +7,8 @@ import { ConfigProvider } from 'antd'
 import { Fragment } from 'react/jsx-runtime'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Login from './pages/user/login'
+import PokemonHome from './pages/pokemon/PokemonHome.tsx'
+import PokemonDetail from './pages/pokemon/PokemonDetail.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Fragment>
@@ -15,6 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path='/' element={<Login></Login>}></Route>
           <Route path='/admin/*' element={<App></App>}></Route>
+          <Route path='/pokemon/home' element={<PokemonHome></PokemonHome>}></Route>
+          <Route path='/pokemon/detail' element={<PokemonDetail></PokemonDetail>}></Route>
         </Routes>
       </ConfigProvider>
     </Router>
