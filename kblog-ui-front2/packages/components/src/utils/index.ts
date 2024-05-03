@@ -1,1 +1,0 @@
-export { getFontSize } from 'tamagui';
