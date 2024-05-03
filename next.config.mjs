@@ -6,6 +6,8 @@ const nextConfig = {
     'rc-picker',
     'rc-pagination',
     'rc-util',
+    'rc-tree',
+    'rc-table',
     'antd',
   ],
 }
