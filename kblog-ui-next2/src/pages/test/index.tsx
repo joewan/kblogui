@@ -10,19 +10,30 @@ export default function Test(props) {
             </span>
 
             <Card>
-                <h1>Bitcoin</h1>
+                <h1>Bitcoin </h1>
+                <a>bitcoin.org</a>
+                <img src="/web3/bitcoin.png" width="40px" height="40px"></img>
             </Card>
             <Card>
                 <h1>Ethereum</h1>
+                <a>ethereum.org</a>
+                <img src="/web3/eth.png" width="40px" height="40px"></img>
             </Card>
             <Card>
                 <h1>Solana</h1>
+                <a>solana.com</a>
+                <img src="/web3/solana.png" width="40px" height="40px"></img>
             </Card>
             <Card>
                 <h1>TON</h1>
+                <a>ton.org</a>
+                <img src="/web3/ton.png" width="40px" height="40px"></img>
             </Card>
             <Card>
                 <h1>BeraChain</h1>
+                <a>berachain.com</a>
+                <img src="/web3/bera.png" width="40px" height="40px"></img>
+
             </Card>
         </Fragment>
     )

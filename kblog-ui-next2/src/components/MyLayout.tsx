@@ -17,7 +17,7 @@ import {
   Breadcrumb,
 } from 'antd'
 import logo from '../assets/bome.svg'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const { Header, Sider, Content } = Layout
 
@@ -29,7 +29,7 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   return (
     <Layout style={{ height: '100vh', width: '100vw' }}>
@@ -55,7 +55,7 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({
           mode='inline'
           defaultSelectedKeys={['1']}
           onClick={({ key }) => {
-            navigate(key)
+            // navigate(key)
           }}
           items={[
             {
@@ -136,11 +136,11 @@ const MyLayout: React.FC<{ children: React.ReactNode }> = ({
               onClick: ({ key }) => {
                 if (key == '/login') {
                   message.success('退出登录成功')
-                  navigate('/')
+                  // navigate('/')
                 } else if (key == '/admin/books/list') {
                   message.info('暂未开通')
                 } else {
-                  navigate(key)
+                  // navigate(key)
                 }
               },
               items: [
